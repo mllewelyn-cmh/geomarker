@@ -8,7 +8,6 @@ ADD GeoMarker.Frontiers.DriveTime/entrypoint_json.R /app
 
 FROM ghcr.io/degauss-org/drivetime:1.2.0
 WORKDIR /app
-ADD https://cmripublicstorage.blob.core.windows.net/public/center_addresses.csv /app/center_addresses.csv
 COPY --from=build /app .
 EXPOSE 80
 EXPOSE 443
